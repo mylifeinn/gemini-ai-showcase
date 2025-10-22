@@ -1,0 +1,5 @@
+{
+  "name": "Deli Studio AI 演示",
+  "description": "一个交互式Web应用，用于演示Gemini API的功能，包括文本生成、图像创建、多轮聊天和网络搜索。使用 React 和 Tailwind CSS 构建。由 delistudio.top 提供。",
+  "requestFramePermissions": []
+}
