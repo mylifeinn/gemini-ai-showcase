@@ -48,7 +48,7 @@ if %errorlevel% equ 0 (
     echo ✅ 镜像构建成功！
     echo.
     echo 🚀 启动容器...
-    docker-compose up -d
+    docker compose up -d
     
     if %errorlevel% equ 0 (
         echo ✅ 容器启动成功！
@@ -57,9 +57,9 @@ if %errorlevel% equ 0 (
         echo    http://localhost:3000
         echo.
         echo 📋 常用命令：
-        echo    查看状态: docker-compose ps
-        echo    查看日志: docker-compose logs -f
-        echo    停止服务: docker-compose down
+        echo    查看状态: docker compose ps
+        echo    查看日志: docker compose logs -f
+        echo    停止服务: docker compose down
     ) else (
         echo ❌ 容器启动失败
         pause

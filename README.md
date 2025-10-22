@@ -49,7 +49,7 @@ chmod +x deploy.sh
 
 3. 构建并启动容器：
    ```bash
-   docker-compose up -d --build
+   docker compose up -d --build
    ```
 
 4. 访问应用：
@@ -76,7 +76,7 @@ chmod +x deploy.sh
 
 使用 Docker Compose：
 ```bash
-docker-compose down
+docker compose down
 ```
 
 使用 Docker 命令：
@@ -97,7 +97,7 @@ docker stop <container_id>
 
 3. 使用生产环境配置启动：
    ```bash
-   docker-compose -f docker-compose.prod.yml up -d
+   docker compose -f docker compose.prod.yml up -d
    ```
 
 4. 访问应用：
@@ -107,17 +107,17 @@ docker stop <container_id>
 
 查看容器状态：
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 查看日志：
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 重新构建并启动：
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 清理未使用的镜像：
@@ -137,8 +137,8 @@ docker system prune -a
 1. 确保 `.env` 文件存在且包含正确的 `GEMINI_API_KEY`
 2. 重新构建镜像：
    ```bash
-   docker-compose down
-   docker-compose up -d --build
+   docker compose down
+   docker compose up -d --build
    ```
 
 #### 2. Docker 构建失败
@@ -151,7 +151,7 @@ docker system prune -a
 3. 清理 Docker 缓存：
    ```bash
    docker system prune -a
-   docker-compose build --no-cache
+   docker compose build --no-cache
    ```
 
 #### 3. 容器无法启动
@@ -161,7 +161,7 @@ docker system prune -a
 **解决方案**：
 1. 查看容器日志：
    ```bash
-   docker-compose logs
+   docker compose logs
    ```
 2. 检查端口是否被占用：
    ```bash
@@ -175,7 +175,7 @@ docker system prune -a
 **解决方案**：
 1. 检查容器状态：
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
 2. 确保防火墙允许 3000 端口访问
 3. 尝试使用 `http://127.0.0.1:3000` 访问
